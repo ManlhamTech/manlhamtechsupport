@@ -9,5 +9,15 @@
     { "source": "/graphicdesign", "destination": "/graphicdesign.html" },
     { "source": "/digitalmarket", "destination": "/digitalmarket.html" },
     { "source": "/contact", "destination": "/contact.html" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/fullstack.html", "destination": "/fullstack", "permanent": true },
+    { "source": "/database.html", "destination": "/database", "permanent": true },
+    { "source": "/webdev.html", "destination": "/webdev", "permanent": true },
+    { "source": "/graphicdesign.html", "destination": "/graphicdesign", "permanent": true },
+    { "source": "/digitalmarket.html", "destination": "/digitalmarket", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true }
   ]
 }
