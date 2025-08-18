@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/home", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/fullstack", "destination": "/fullstack.html" },
+    { "source": "/database", "destination": "/database.html" },
+    { "source": "/webdev", "destination": "/webdev.html" },
+    { "source": "/graphicdesign", "destination": "/graphicdesign.html" },
+    { "source": "/digitalmarket", "destination": "/digitalmarket.html" },
+    { "source": "/contact", "destination": "/contact.html" }
+  ]
+}
