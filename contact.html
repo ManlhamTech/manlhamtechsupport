@@ -42,6 +42,23 @@
         color: #3adbff;
       }
     </style>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXCDV460WN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SXCDV460WN');
+</script>
+
+<!-- Track email clicks -->
+<a href="mailto:support@manlhamtechsupport.com" onclick="gtag('event','email_click',{ 'event_category':'lead', 'event_label':'Email Click' });">Email Us</a>
+
+<!-- Track phone clicks -->
+<a href="tel:+211XXXXXXXX" onclick="gtag('event','phone_click',{ 'event_category':'lead', 'event_label':'Phone Click' });">Call Us</a>
+
   </head>
 
   <body>
@@ -265,6 +282,22 @@ document.getElementById('contactForm').addEventListener('submit', async function
     }
 });
 </script>
+
+<form id="contactForm" action="/thank-you.html">
+  <!-- your form fields here -->
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function() {
+    gtag('event', 'form_submission', {
+      'event_category': 'lead',
+      'event_label': 'Contact Form'
+    });
+  });
+</script>
+
 
     <!-- Google Map -->
     <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
