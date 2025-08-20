@@ -21,9 +21,9 @@
   <meta property="og:description" content="Manlham Tech Support offers cutting-edge software solutions for 
       businesses, including custom software development, web application development, 
       and mobile app development. Contact us to transform your ideas into reality." />
-  <meta property="og:image" content="https://www.manlhamtech.com/img/about.png" />
-  <meta property="og:url" content="https://www.manlhamtech.com/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://manlhamtechsupport.vercel.app/img/about.png" />
+  <meta property="og:url" content="https://manlhamtechsupport.vercel.app/" />
+  <meta property="og:type" content="https://manlhamtechsupport.vercel.app" />
   <meta property="og:site_name" content="Manlham Tech Support" />
 
   <!-- Twitter -->
@@ -32,7 +32,7 @@
   <meta name="twitter:description" content="Manlham Tech Support offers cutting-edge software solutions for 
       businesses, including custom software development, web application development, 
       and mobile app development. Contact us to transform your ideas into reality." />
-  <meta name="twitter:image" content="https://www.manlhamtech.com/img/award2.jpg" />
+  <meta name="twitter:image" content="https://manlhamtechsupport.vercel.app/img/award2.jpg" />
   <meta name="twitter:site" content="https://x.com/manlhamtech" />
   <meta name="twitter:creator" content="https://x.com/manlhamtech" />
   <!-- End SEO -->
@@ -86,7 +86,7 @@
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
     <a href="index.html" class="navbar-brand d-flex align-items-center">
-      <img id="logoimg" src="img/MTSupport_Logo1-removebg-preview.png" alt="" />
+      <img id="logoimg" src="img/MTS_Logo_2.png" alt="" />
     </a>
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -180,7 +180,7 @@
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-          <img class="img-fluid" src="img/MTSupport_Logo2.png" alt="" />
+          <img class="img-fluid" src="img/MTS Logo 1-1.png" alt="" />
         </div>
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
           <div class="h-100">
@@ -426,17 +426,23 @@
     background: #fff;
     padding: 15px;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .team-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 
   .team-item img {
     width: 100%;
-    height: auto; /* responsive height */
-    max-height: 250px; /* limit height but keep aspect ratio */
-    object-fit: contain; /* fit image inside without cutting */
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
     border-radius: 8px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
     cursor: pointer;
     margin-bottom: 15px;
   }
@@ -451,6 +457,39 @@
 
   .team-info p {
     margin: 2px 0;
+  }
+
+  /* Social Icons */
+  .team-social {
+    margin-top: 12px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+  }
+
+  .team-item:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .team-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 18px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+
+  .team-social a:hover {
+    background: #00bcd4;
+    color: #fff;
+    transform: scale(1.15);
   }
 
   @media (max-width: 768px) {
@@ -485,8 +524,13 @@
           <div class="team-info">
             <h5>Gatdong Kim</h5>
             <p>Founder & Software Developer</p>
-            <p>Email: <a href="mailto:info.manlham@gmail.com">info.manlham@gmail.com</a></p>
+            <p>Email: <a href="mailto:mts.manlham@gmail.com">mts.manlham@gmail.com</a></p>
             <p>Tel: <a href="tel:+211929267673">(211) 929-267673</a></p>
+          </div>
+          <div class="team-social">
+            <a href="https://linkedin.com/in/gatdong.kim" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:mts.manlham@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://facebook.com/gatdongkim" target="_blank"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
@@ -497,9 +541,14 @@
           <img class="img-fluid mb-3" src="img/shamjok.jpg" alt="Shamjok Gony" />
           <div class="team-info">
             <h5>Shamjok Gony</h5>
-            <p>IT Support professionals</p>
+            <p>IT Support Professional</p>
             <p>Email: <a href="mailto:shamjokgony@gmail.com">shamjokgony@gmail.com</a></p>
             <p>Tel: <a href="tel:+211923381150">+211 923-381150</a></p>
+          </div>
+          <div class="team-social">
+            <a href="https://linkedin.com/in/shamjokgony" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:shamjokgony@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://facebook.com/shamjok.gony" target="_blank"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
@@ -507,25 +556,35 @@
       <!-- Team Member 3 -->
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
         <div class="team-item bg-white p-4">
-          <img class="img-fluid mb-3" src="img/wuor.jpg" alt="Wuor Bang" />
+          <img class="img-fluid mb-3" src="img/wuor.jpg" alt="Wuor Bhang" />
           <div class="team-info">
             <h5>Wuor Bhang</h5>
             <p>Full Stack Developer</p>
             <p>Email: <a href="mailto:wuorbhang@gmail.com">wuorbhang@gmail.com</a></p>
-            <p>Tel: <a href="tel:+254700797210">+254 700-797210 </a></p>
+            <p>Tel: <a href="tel:+254700797210">+254 700-797210</a></p>
+          </div>
+          <div class="team-social">
+            <a href="https://linkedin.com/in/wuorbhang" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:wuorbhang@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://facebook.com/wuor.bhang" target="_blank"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
 
-        <!-- Team Member 4 -->
+      <!-- Team Member 4 -->
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
         <div class="team-item bg-white p-4">
           <img class="img-fluid mb-3" src="img/chai.jpg" alt="Chai Gatkek" />
           <div class="team-info">
             <h5>Chai Gatkek</h5>
             <p>Digital Marketing Specialist</p>
-            <p>Email:  <a href="mailto:chaichaigatkek@gmail.com">chaichaigatkek@gmail.com</a></p>
+            <p>Email: <a href="mailto:chaichaigatkek@gmail.com">chaichaigatkek@gmail.com</a></p>
             <p>Tel: <a href="tel:+211922660280">+211 922-660280</a></p>
+          </div>
+          <div class="team-social">
+            <a href="https://linkedin.com/in/chaigatkek" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:chaichaigatkek@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://facebook.com/chai.gatkek" target="_blank"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
@@ -534,8 +593,6 @@
   </div>
 </div>
 <!-- Team Members End -->
-
-
 
 
   <!-- Roadmap Start -->
@@ -694,7 +751,7 @@
       <!-- Logo + About -->
       <div class="col-md-6">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-          <img id="logoimg" src="img/MTSupport_Logo-removebg-preview.png" alt="" />
+          <img id="logoimg" src="img/MTS_Logo_1.png" alt="" />
         </a>
         <br />
         <span>
