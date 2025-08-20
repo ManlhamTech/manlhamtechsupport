@@ -283,21 +283,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
 });
 </script>
 
-<form id="contactForm" action="/thank-you.html">
-  <!-- your form fields here -->
-  <button type="submit">Submit</button>
-</form>
-
-<script>
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', function() {
-    gtag('event', 'form_submission', {
-      'event_category': 'lead',
-      'event_label': 'Contact Form'
-    });
-  });
-</script>
-
 
     <!-- Google Map -->
     <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
