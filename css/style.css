@@ -385,3 +385,50 @@ h6,
         visibility: visible;
     }
 }
+
+/* Ensure no horizontal scroll */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Make sure the WhatsApp button is positioned correctly */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: block;
+}
+
+/* Add responsive styling to prevent overflow */
+@media (max-width: 768px) {
+    /* Adjust the width of the page content */
+    .container, .navbar, .service-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Ensure images don't overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Make sure no elements cause horizontal scrolling */
+    .navbar-nav, .dropdown-menu {
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+
+/* Prevent elements from causing horizontal scrolling */
+@media (max-width: 480px) {
+    .service-item, .navbar-nav {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
