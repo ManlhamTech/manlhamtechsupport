@@ -974,6 +974,34 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
     }
   });
 </script>
+
+<script>
+    // Wait until the page is fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all dropdown elements
+        const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
+
+        // Loop through each dropdown and add event listener
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function (e) {
+                // Prevent event from propagating
+                e.stopPropagation();
+
+                // Toggle the 'show' class to toggle visibility of the dropdown menu
+                this.classList.toggle('show');
+            });
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function (e) {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
 

@@ -363,3 +363,25 @@ h6,
 .footer .copyright a:hover {
     color: var(--dark);
 }
+
+/* Dropdown - Always visible on desktop */
+.navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* For mobile devices - Hide the dropdown by default and show when active */
+@media (max-width: 991.98px) {
+    .navbar .nav-item.dropdown .dropdown-menu {
+        display: none; /* Hide the dropdown by default */
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navbar .nav-item.dropdown.show .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
