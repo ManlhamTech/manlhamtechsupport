@@ -241,20 +241,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <!-- About End -->
 
-<!-- Footer -->
+    <!-- Footer -->
 <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
   <div class="container py-5">
     <div class="row g-5">
       <!-- Logo + About -->
       <div class="col-md-6">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-          <img id="logoimg" src="img/MTS_Logo_1.png" alt="" />
+          <img id="logoimg" src="img/MTS_Logo_1.png" alt="Manlham Tech Support Logo" />
         </a>
         <br />
         <span>
-          Whether it's designing custom applications, implementing
-          enterprise solutions, or providing ongoing maintenance and
-          support, we are dedicated to helping our clients succeed
+          Whether it's designing custom applications, implementing enterprise
+          solutions, or providing ongoing maintenance and support, we are
+          dedicated to helping our clients succeed.
         </span>
       </div>
 
@@ -264,8 +264,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Connect for Solutions, Reach Out Today!</p>
         <form id="newsletterForm" action="https://formspree.io/f/xldlydob" method="POST">
           <div class="position-relative">
-            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" name="email" placeholder="Your email" required />
-            <button type="submit" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" 
+                   type="email" name="email" placeholder="Your email" required />
+            <button type="submit" 
+                    class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
           </div>
         </form>
         <p id="successMessage" style="display:none; color:green; margin-top:10px;">
@@ -278,7 +282,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h5 class="mb-4">Get In Touch</h5>
         <p style="font-size: 13px">
           <i class="fa fa-map-marker-alt me-3"></i>
-          <a href="https://www.google.com/maps/place/Nyirol,+Jonglei,+South+Sudan" target="_blank" style="color: inherit; text-decoration: none;">
+          <a href="https://www.google.com/maps/place/Nyirol,+Jonglei,+South+Sudan" 
+             target="_blank" style="color: inherit; text-decoration: none;">
             Nyirol, Jonglei, South Sudan
           </a>
         </p>
@@ -298,7 +303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Cell Contacts -->
       <div class="col-lg-3 col-md-6">
         <h5 class="mb-4">Cell</h5>
-        <p style="white-space: nowrap">Gatdong Kim : <a href="tel:+211929267673">(211) 929-267673</a></p>
+        <p>Gatdong Kim : <a href="tel:+211929267673">(211) 929-267673</a></p>
         <p>Chai Gatkek : <a href="tel:+211922660280">(211) 922-660280</a></p>
         <p>Shamjok Gony : <a href="tel:+211923381150">(211) 923-381150</a></p>
       </div>
@@ -314,10 +319,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-lg-3 col-md-6">
         <h5 class="mb-4">Follow Us</h5>
         <div class="d-flex">
-          <a class="btn btn-square rounded-circle me-1" href="https://x.com/manlhamtech"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/manlhamtechsupport/"><i class="fab fa-facebook-f"></i></a>
-          <!-- <a class="btn btn-square rounded-circle me-1" href=""><i class="fab fa-youtube"></i></a> -->
-          <a class="btn btn-square rounded-circle me-1" href="https://www.linkedin.com/company/manlham-tech-support/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-square rounded-circle me-1" href="https://x.com/manlhamtech">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/manlhamtechsupport/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-square rounded-circle me-1" href="https://www.linkedin.com/company/manlham-tech-support/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -337,13 +347,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
+<!-- Footer End -->
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Newsletter AJAX -->
 <script>
 document.getElementById('newsletterForm').addEventListener('submit', function(e) {
     e.preventDefault(); 
     const form = e.target;
-
     fetch(form.action, {
         method: form.method,
         body: new FormData(form),
@@ -362,204 +382,82 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
     .catch(() => alert("Oops! There was a problem."));
 });
 </script>
-<!-- Footer End -->
 
-<!-- Back to Top -->
-    <!-- <a
-      href="#"
-      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a> -->
+<!-- Dropdown + Smooth Scroll Fix -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Dropdown toggle
+    const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (e) {
+            e.stopPropagation();
+            this.classList.toggle('show');
+        });
+    });
+    document.addEventListener('click', function (e) {
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+    });
 
-    <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
+    // Smooth scroll only for internal links (#)
+    const navLinks = document.querySelectorAll('.navbar .nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+            // For .html pages → default navigation
+        });
+    });
+});
+</script>
 
-
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
-
- <!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/211929267673"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="whatsapp-float"
->
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/211929267673" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
   <i class="fab fa-whatsapp"></i>
 </a>
-
 <style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background: #25d366;
-    color: white;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 28px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-
-  .whatsapp-float:hover {
-    transform: translateY(-50%) scale(1.15);
-    box-shadow: 0 0 15px #25d366;
-  }
+.whatsapp-float {
+  position: fixed;
+  bottom: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: #25d366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 28px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 0 15px #25d366;
+}
 </style>
 
-<!-- Your existing content -->
-
-<!-- WhatsApp Button JavaScript -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('WhatsApp button should be visible');
-    // You can also log the button's visibility here:
-    const whatsappButton = document.getElementById('whatsapp-button');
-    if (whatsappButton) {
-      console.log('WhatsApp button is visible');
-    }
-  });
-</script>
-
-<script>
-    // Wait until the page is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get all dropdown elements
-        const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
-
-        // Loop through each dropdown and add event listener
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                // Prevent event from propagating
-                e.stopPropagation();
-
-                // Toggle the 'show' class to toggle visibility of the dropdown menu
-                this.classList.toggle('show');
-            });
-        });
-
-        // Close dropdown if clicked outside
-        document.addEventListener('click', function (e) {
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('show');
-                }
-            });
-        });
-    });
-</script>
-<!-- JavaScript to handle dropdown and smooth scroll -->
-<script>
-    // Wait until the page is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get all the dropdown menu elements
-        const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
-
-        // Toggle dropdown visibility when clicking on the dropdown menu
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                // Prevent event propagation to avoid triggering the document click
-                e.stopPropagation();
-                // Toggle the 'show' class to show or hide the dropdown
-                this.classList.toggle('show');
-            });
-        });
-
-        // Close dropdowns when clicking anywhere outside the menu
-        document.addEventListener('click', function (e) {
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('show'); // Close the dropdown
-                }
-            });
-        });
-
-        // Add smooth scroll behavior to navigation links
-        const navLinks = document.querySelectorAll('.navbar .nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                // Prevent the default behavior of the anchor link (page jump)
-                e.preventDefault();
-
-                // Get the target section ID from the link href
-                const targetId = this.getAttribute('href').substring(1); // Remove the '#' from the href
-
-                // Scroll to the target section
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({
-                    behavior: 'smooth', // Smooth scroll animation
-                    block: 'start'      // Align the top of the target section with the top of the viewport
-                });
-            });
-        });
-    });
-</script>
-
-<!-- JavaScript to handle dropdown and smooth scroll -->
-<script>
-    // Wait until the page is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get all the dropdown menu elements
-        const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
-
-        // Toggle dropdown visibility when clicking on the dropdown menu
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                // Prevent event propagation to avoid triggering the document click
-                e.stopPropagation();
-                // Toggle the 'show' class to show or hide the dropdown
-                this.classList.toggle('show');
-            });
-        });
-
-        // Close dropdowns when clicking anywhere outside the menu
-        document.addEventListener('click', function (e) {
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('show'); // Close the dropdown
-                }
-            });
-        });
-
-        // Add smooth scroll behavior to navigation links
-        const navLinks = document.querySelectorAll('.navbar .nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                // Prevent the default behavior of the anchor link (page jump)
-                e.preventDefault();
-
-                // Get the target section ID from the link href
-                const targetId = this.getAttribute('href').substring(1); // Remove the '#' from the href
-
-                // Scroll to the target section
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({
-                    behavior: 'smooth', // Smooth scroll animation
-                    block: 'start'      // Align the top of the target section with the top of the viewport
-                });
-            });
-        });
-    });
-</script>
+<!-- Facebook SDK -->
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
-src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0">
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0">
 </script>
-  </body>
+</body>
 </html>
