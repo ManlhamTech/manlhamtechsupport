@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>MTSupport - Software Solutions</title>
+  <title>Manlham Tech Support - Software Solutions</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -130,8 +130,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- <a href="downloads.html" class="nav-item nav-link"
             ><i class="fa fa-download navi"></i> &nbsp; Downloads</a
           > -->
-        <!-- <a href="clints.html" class="nav-item nav-link"><i class="fas fa-users navi"></i> &nbsp; Clients</a> -->
-
         <div class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
             <i class="fas fa-box navi"></i> &nbsp; Services</a>
@@ -156,6 +154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="digitalmarket.html" class="dropdown-item"><i class="fa fa-cloud navi"></i>&nbsp; Digital Marketing</a>
           </div>
         </div>
+        <a href="blog.html" class="nav-item nav-link"><i class="fas fa-blog navi"></i> &nbsp; Blog</a>
         <a href="contact.html" class="nav-item nav-link" style="margin-right: 80px">
           <i class="fas fa-phone navi"></i> &nbsp; Contact</a>
       </div>
@@ -953,15 +952,42 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
 
-  <!-- WhatsApp Chat Button -->
-<a 
-  href="https://wa.me/211929267673" 
-  target="_blank" 
+ <!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/211929267673"
+  target="_blank"
   rel="noopener noreferrer"
-  style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.2); font-family: Arial, sans-serif; z-index: 1000;"
+  class="whatsapp-float"
 >
-  💬 Chat on WhatsApp
+  <i class="fab fa-whatsapp"></i>
 </a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #25d366;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 0 15px #25d366;
+  }
+</style>
 
 <!-- Your existing content -->
 
@@ -1101,10 +1127,6 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 </script>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
-</body>
-</html>
-
 
 </body>
-
 </html>
