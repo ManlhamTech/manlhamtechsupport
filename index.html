@@ -938,7 +938,6 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 </script>
 <!-- Footer End -->
 
-
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -948,185 +947,91 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/counterup/counterup.min.js"></script>
 
-
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
 
- <!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/211929267673"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="whatsapp-float"
->
-  <i class="fab fa-whatsapp"></i>
-</a>
+  <!-- WhatsApp Floating Button -->
+  <a
+    href="https://wa.me/211929267673"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-<style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background: #25d366;
-    color: white;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 28px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-
-  .whatsapp-float:hover {
-    transform: translateY(-50%) scale(1.15);
-    box-shadow: 0 0 15px #25d366;
-  }
-</style>
-
-<!-- Your existing content -->
-
-<!-- WhatsApp Button JavaScript -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('WhatsApp button should be visible');
-    // You can also log the button's visibility here:
-    const whatsappButton = document.getElementById('whatsapp-button');
-    if (whatsappButton) {
-      console.log('WhatsApp button is visible');
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background: #25d366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: all 0.3s ease;
     }
+
+    .whatsapp-float:hover {
+      transform: translateY(-50%) scale(1.15);
+      box-shadow: 0 0 15px #25d366;
+    }
+  </style>
+
+  <!-- Dropdown + Smooth Scroll Fix -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Handle dropdown menus
+      const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
+      dropdowns.forEach(dropdown => {
+          dropdown.addEventListener('click', function (e) {
+              e.stopPropagation();
+              this.classList.toggle('show');
+          });
+      });
+      document.addEventListener('click', function (e) {
+          dropdowns.forEach(dropdown => {
+              if (!dropdown.contains(e.target)) {
+                  dropdown.classList.remove('show');
+              }
+          });
+      });
+
+      // Handle smooth scroll only for anchor links (#)
+      const navLinks = document.querySelectorAll('.navbar .nav-link');
+      navLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+              const href = this.getAttribute('href');
+              if (href && href.startsWith('#')) {
+                  e.preventDefault();
+                  const targetId = href.substring(1);
+                  const targetSection = document.getElementById(targetId);
+                  if (targetSection) {
+                      targetSection.scrollIntoView({
+                          behavior: 'smooth',
+                          block: 'start'
+                      });
+                  }
+              }
+              // If it's about.html / services.html → default navigation works
+          });
+      });
   });
-</script>
+  </script>
 
-<script>
-    // Wait until the page is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get all dropdown elements
-        const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
-
-        // Loop through each dropdown and add event listener
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                // Prevent event from propagating
-                e.stopPropagation();
-
-                // Toggle the 'show' class to toggle visibility of the dropdown menu
-                this.classList.toggle('show');
-            });
-        });
-
-        // Close dropdown if clicked outside
-        document.addEventListener('click', function (e) {
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('show');
-                }
-            });
-        });
-    });
-</script>
-<!-- JavaScript to handle dropdown and smooth scroll -->
-<script>
-    // Wait until the page is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get all the dropdown menu elements
-        const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
-
-        // Toggle dropdown visibility when clicking on the dropdown menu
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                // Prevent event propagation to avoid triggering the document click
-                e.stopPropagation();
-                // Toggle the 'show' class to show or hide the dropdown
-                this.classList.toggle('show');
-            });
-        });
-
-        // Close dropdowns when clicking anywhere outside the menu
-        document.addEventListener('click', function (e) {
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('show'); // Close the dropdown
-                }
-            });
-        });
-
-        // Add smooth scroll behavior to navigation links
-        const navLinks = document.querySelectorAll('.navbar .nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                // Prevent the default behavior of the anchor link (page jump)
-                e.preventDefault();
-
-                // Get the target section ID from the link href
-                const targetId = this.getAttribute('href').substring(1); // Remove the '#' from the href
-
-                // Scroll to the target section
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({
-                    behavior: 'smooth', // Smooth scroll animation
-                    block: 'start'      // Align the top of the target section with the top of the viewport
-                });
-            });
-        });
-    });
-</script>
-
-<!-- JavaScript to handle dropdown and smooth scroll -->
-<script>
-    // Wait until the page is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get all the dropdown menu elements
-        const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
-
-        // Toggle dropdown visibility when clicking on the dropdown menu
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                // Prevent event propagation to avoid triggering the document click
-                e.stopPropagation();
-                // Toggle the 'show' class to show or hide the dropdown
-                this.classList.toggle('show');
-            });
-        });
-
-        // Close dropdowns when clicking anywhere outside the menu
-        document.addEventListener('click', function (e) {
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('show'); // Close the dropdown
-                }
-            });
-        });
-
-        // Add smooth scroll behavior to navigation links
-        const navLinks = document.querySelectorAll('.navbar .nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                // Prevent the default behavior of the anchor link (page jump)
-                e.preventDefault();
-
-                // Get the target section ID from the link href
-                const targetId = this.getAttribute('href').substring(1); // Remove the '#' from the href
-
-                // Scroll to the target section
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({
-                    behavior: 'smooth', // Smooth scroll animation
-                    block: 'start'      // Align the top of the target section with the top of the viewport
-                });
-            });
-        });
-    });
-</script>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>
-
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0">
+  </script>
 </body>
 </html>
