@@ -27,29 +27,6 @@
     { "source": "/contact", "destination": "/contact.html" }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/fullstack", "destination": "/fullstack.html" },
-    { "source": "/database", "destination": "/database.html" },
-    { "source": "/webdev", "destination": "/webdev.html" },
-    { "source": "/graphicdesign", "destination": "/graphicdesign.html" },
-    { "source": "/digitalmarket", "destination": "/digitalmarket.html" },
-    { "source": "/blog", "destination": "/blog.html" },
-    { "source": "/blog-post1", "destination": "/blog-post1.html" },
-    { "source": "/blog-post2", "destination": "/blog-post2.html" },
-    { "source": "/blog-post3", "destination": "/blog-post3.html" },
-    { "source": "/blog-post4", "destination": "/blog-post4.html" },
-    { "source": "/blog-post5", "destination": "/blog-post5.html" },
-    { "source": "/blog-post6", "destination": "/blog-post6.html" },
-    { "source": "/blog-post7", "destination": "/blog-post7.html" },
-    { "source": "/cloud", "destination": "/cloud.html" },
-    { "source": "/compliance", "destination": "/compliance.html" },
-    { "source": "/content", "destination": "/content.html" },
-    { "source": "/cybersecurity", "destination": "/cybersecurity.html" },
-    { "source": "/design", "destination": "/design.html" },
-    { "source": "/devops", "destination": "/devops.html" },
-    { "source": "/itconsulting", "destination": "/itconsulting.html" },
-    { "source": "/marketing", "destination": "/marketing.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/index.html", "destination": "/", "permanent": true }
   ]
 }
