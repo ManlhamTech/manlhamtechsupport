@@ -502,17 +502,22 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/211929267673" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+<a href="https://wa.me/211929267673" target="_blank" rel="noopener noreferrer" 
+   class="float-btn whatsapp-float" data-tooltip="Chat with us on WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- Calendly Popup Floating Button -->
+<a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/manlhamtechsupport/consultation-call'}); return false;" 
+   class="float-btn calendly-float" data-tooltip="Book an Appointment">
+  <i class="fa fa-calendar"></i>
+</a>
+
 <style>
-.whatsapp-float {
+/* Common button style */
+.float-btn {
   position: fixed;
-  bottom: 50%;
   right: 20px;
-  transform: translateY(-50%);
-  background: #25d366;
-  color: white;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -520,14 +525,58 @@ document.addEventListener('DOMContentLoaded', function () {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 24px;
+  color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  transition: all 0.3s ease;
 }
-.whatsapp-float:hover {
-  transform: translateY(-50%) scale(1.15);
-  box-shadow: 0 0 15px #25d366;
+
+/* Positioning + Animation */
+.whatsapp-float {
+  bottom: 50%;
+  background: #25d366;
+  animation: bounce 2s infinite;
+  animation-delay: 0s; /* start immediately */
+}
+.calendly-float {
+  bottom: calc(50% - 70px);
+  background: #2563eb;
+  animation: pulse 2s infinite;
+  animation-delay: 1s; /* starts 1 second later */
+}
+
+/* Bounce animation for WhatsApp */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Pulse animation for Calendly */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+/* Tooltip styling */
+.float-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 70px; 
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.float-btn:hover::after {
+  opacity: 1;
 }
 </style>
 
