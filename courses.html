@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>ICT Courses | Manlham Tech Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- General SEO -->
+  <meta name="title" content="Manlham Tech Support" />
+  <meta name="description" content="Empowering individuals and organizations through digital services and training." />
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:title" content="Manlham Tech Support" />
+  <meta property="og:description" content="Empowering individuals and organizations through digital services and training." />
+  <meta property="og:image" content="https://manlhamtechsupport.vercel.app/img/MTS_Logo_1.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://manlhamtechsupport.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Manlham Tech Support" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manlham Tech Support" />
+  <meta name="twitter:description" content="Empowering individuals and organizations through digital services and training." />
+  <meta name="twitter:image" content="https://manlhamtechsupport.vercel.app/img/MTS_Logo_1.png" />
+  <meta name="twitter:site" content="@manlhamtech" />
+  <meta name="twitter:creator" content="@manlhamtech" />
+
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/img/lham.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#0d1117">
+  <meta name="msapplication-TileImage" content="/mstile-150x150.png">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    .navi {
+      color: #3adbff;
+    }
+    .course-card {
+      transition: transform 0.2s ease-in-out;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+    .hero {
+      background: linear-gradient(to right, #0d6efd, #0a58ca);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  </style>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
+    (window,document,'script','dataLayer','GTM-BBR5CB4K');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXCDV460WN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SXCDV460WN');
+  </script>
+</head>
+
+<body>
+  <!-- Spinner -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-BBR5CB4K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
+    <a href="/" class="navbar-brand d-flex align-items-center">
+      <img id="logoimg" src="img/MTS_Logo_2.png" alt="Manlham Tech Support Logo" />
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-4 py-lg-0">
+        <a href="/" class="nav-item nav-link"><i class="fas fa-home navi"></i> &nbsp; Home</a>
+        <a href="/about" class="nav-item nav-link"><i class="fas fa-info-circle navi"></i> &nbsp; About</a>
+
+        <!-- Services Dropdown -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-box navi"></i> &nbsp; Services</a>
+          <div class="dropdown-menu dropdown-menu-center p-4 shadow-sm m-0" style="min-width: 900px;">
+            <div class="row">
+              <div class="col-md-4">
+                <h6 class="dropdown-header">Development</h6>
+                <a href="/fullstack" class="dropdown-item"><i class="fas fa-cogs navi"></i> Full Stack Development</a>
+                <a href="/database" class="dropdown-item"><i class="fas fa-database navi"></i> Database Management</a>
+                <a href="/webdev" class="dropdown-item"><i class="fas fa-globe navi"></i> Custom Web Applications</a>
+              </div>
+              <div class="col-md-4">
+                <h6 class="dropdown-header">Design & UX</h6>
+                <a href="/graphicdesign" class="dropdown-item"><i class="fas fa-paint-brush navi"></i> Graphic Designing</a>
+                <a href="/uiux" class="dropdown-item"><i class="fas fa-pencil-ruler navi"></i> UI / UX Design</a>
+              </div>
+              <div class="col-md-4">
+                <h6 class="dropdown-header">Cloud & Infrastructure</h6>
+                <a href="/cloud" class="dropdown-item"><i class="fas fa-cloud navi"></i> Cloud Solutions</a>
+                <a href="/devops" class="dropdown-item"><i class="fas fa-server navi"></i> DevOps & Infrastructure</a>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <h6 class="dropdown-header">Security & Compliance</h6>
+                <a href="/cybersecurity" class="dropdown-item"><i class="fas fa-shield-alt navi"></i> Cybersecurity</a>
+                <a href="/compliance" class="dropdown-item"><i class="fas fa-user-shield navi"></i> IT Compliance</a>
+              </div>
+              <div class="col-md-4">
+                <h6 class="dropdown-header">IT Consulting</h6>
+                <a href="/itconsulting" class="dropdown-item"><i class="fas fa-chalkboard-teacher navi"></i> IT Strategy</a>
+                <a href="/training" class="dropdown-item"><i class="fas fa-graduation-cap navi"></i> Training & Support</a>
+              </div>
+              <div class="col-md-4">
+                <h6 class="dropdown-header">Digital Marketing</h6>
+                <a href="/digitalmarket" class="dropdown-item"><i class="fas fa-bullhorn navi"></i> SEO & Marketing</a>
+                <a href="/content" class="dropdown-item"><i class="fas fa-pen-nib navi"></i> Content Strategy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="/blog" class="nav-item nav-link"><i class="fas fa-blog navi"></i> &nbsp; Blog</a>
+        <a href="/courses.html" class="nav-item nav-link"><i class="fas fa-graduation-cap navi"></i> &nbsp; Courses</a>
+        <a href="/contact" class="nav-item nav-link" style="margin-right: 80px"><i class="fas fa-phone navi"></i> &nbsp; Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-5 fw-bold">ICT Courses</h1>
+      <p class="lead">Empowering individuals and businesses with essential digital skills.</p>
+      <a href="#courses" class="btn btn-light btn-lg">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Available Courses</h2>
+      <div class="row g-4">
+        <!-- Course Cards -->
+        <div class="col-md-4">
+          <div class="card course-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Computer Applications</h5>
+              <p class="card-text">Learn essential computer operations, MS Office, email, and internet navigation.</p>
+              <button class="btn btn-primary enroll-btn" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Computer Applications">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card course-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Advanced Computer Skills</h5>
+              <p class="card-text">Advance your computer knowledge with professional tools and techniques.</p>
+              <button class="btn btn-primary enroll-btn" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Advanced Computer Skills">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card course-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">Master HTML, CSS, JavaScript, and build modern responsive websites.</p>
+              <button class="btn btn-primary enroll-btn" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Web Development">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card course-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity Awareness & Best Practices</h5>
+              <p class="card-text">Understand threats, online safety, and tools to protect your digital assets.</p>
+              <button class="btn btn-primary enroll-btn" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Cybersecurity Awareness">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card course-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Advanced Networking & Systems Administration</h5>
+              <p class="card-text">Master networking, server management, and IT infrastructure administration.</p>
+              <button class="btn btn-primary enroll-btn" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Advanced Networking & Systems Administration">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card course-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Database & Cloud Computing Training</h5>
+              <p class="card-text">Learn database management, cloud platforms, and data security strategies.</p>
+              <button class="btn btn-primary enroll-btn" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Database & Cloud Computing Training">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card course-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Digital Marketing Skills</h5>
+              <p class="card-text">Learn SEO, Social Media, PPC, and Content Marketing to grow your business online.</p>
+              <button class="btn btn-primary enroll-btn" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Digital Marketing Skills">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h3 class="fw-bold">Start Your ICT Journey Today!</h3>
+      <p class="lead">Learn at your own pace and earn certificates upon completion.</p>
+      <a href="#courses" class="btn btn-success btn-lg">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Enrollment Modal -->
+<div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="enrollForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="enrollModalLabel">Course Enrollment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="studentName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="studentName" required>
+          </div>
+          <div class="mb-3">
+            <label for="studentEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="studentEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="courseName" class="form-label">Selected Course</label>
+            <input type="text" class="form-control" id="courseName" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Submit Enrollment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Logo + About -->
+      <div class="col-md-6">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <img id="logoimg" src="img/Logo.png" alt="Manlham Tech Support Logo" />
+        </a>
+        <br />
+        <span>
+          Whether it's designing custom applications, implementing enterprise
+          solutions, or providing ongoing maintenance and support, we are
+          dedicated to helping our clients succeed.
+        </span>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-6">
+        <h5 class="mb-4">Newsletter</h5>
+        <p>Connect for Solutions, Reach Out Today!</p>
+        <form id="newsletterForm" action="https://formspree.io/f/xldlydob" method="POST">
+          <div class="position-relative">
+            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" 
+                   type="email" name="email" placeholder="Your email" required />
+            <button type="submit" 
+                    class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+        </form>
+        <p id="successMessage" style="display:none; color:green; margin-top:10px;">
+          Thank you for subscribing!
+        </p>
+      </div>
+
+      <!-- Contact Quick Info -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="mb-4">Get In Touch</h5>
+        <p style="font-size: 13px">
+          <i class="fa fa-map-marker-alt me-3"></i>
+          <a href="https://www.google.com/maps/place/Nyirol,+Jonglei,+South+Sudan" 
+             target="_blank" style="color: inherit; text-decoration: none;">
+            Nyirol, Jonglei, South Sudan
+          </a>
+        </p>
+        <hr />
+        <p style="font-size: 13px">
+          <i class="fa fa-phone-alt me-3"></i>
+          <a href="tel:+211929267673">(211) 929-267673</a> 
+        </p>
+        <p>
+          <i class="fa fa-envelope me-3"></i>
+          <a href="mailto:mts.manlham@gmail.com">mts.manlham@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- Cell Contacts -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="mb-4">Cell</h5>
+        <p>Gatdong Kim : <a href="tel:+211929267673">(211) 929-267673</a></p>
+        <p>Chai Gatkek : <a href="tel:+211921375074">(211) 921-375-074</a></p>
+        <p>Shamjok Gony : <a href="tel:+211923722240">(211) 923-722-240</a></p>
+        <p>Wuor Bhang : <a href="tel:+254700797210">(254) 700-797210</a></p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="mb-4">Quick Links</h5>
+        <a class="btn btn-link" href="/about">About Us</a>
+        <a class="btn btn-link" href="/contact">Contact Us</a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="mb-4">Follow Us</h5>
+        <div class="d-flex">
+          <a class="btn btn-square rounded-circle me-1" href="https://x.com/manlhamtech">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/manlhamtechsupport/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-square rounded-circle me-1" href="https://www.linkedin.com/company/manlham-tech-support/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container-fluid copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a href="index.html">Manlham Tech Support</a>, All Right Reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          Developed By: <a href="mailto:kgatdong@gmail.com">Gatdong Kim</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Newsletter AJAX -->
+<script>
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    const form = e.target;
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            document.getElementById('successMessage').style.display = 'block';
+            form.reset();
+        } else {
+            response.json().then(data => {
+                alert(data.error || "Oops! There was a problem.");
+            });
+        }
+    })
+    .catch(() => alert("Oops! There was a problem."));
+});
+</script>
+
+<!-- Dropdown + Smooth Scroll Fix -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Dropdown toggle
+    const dropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (e) {
+            e.stopPropagation();
+            this.classList.toggle('show');
+        });
+    });
+    document.addEventListener('click', function (e) {
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+    });
+
+    // Smooth scroll only for internal links (#)
+    const navLinks = document.querySelectorAll('.navbar .nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+});
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/211929267673" target="_blank" rel="noopener noreferrer" 
+   class="float-btn whatsapp-float" data-tooltip="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Calendly Popup Floating Button -->
+<a href="https://calendly.com/manlhamtechsupport/consultation-call" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/manlhamtechsupport/consultation-call'}); return false;" 
+   class="float-btn calendly-float" data-tooltip="Book an Appointment">
+  <i class="fa fa-calendar"></i>
+</a>
+
+<style>
+/* Common button style */
+.float-btn {
+  position: fixed;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Positioning + Animation */
+.whatsapp-float {
+  bottom: 50%;
+  background: #25d366;
+  animation: bounce 2s infinite;
+}
+.calendly-float {
+  bottom: calc(50% - 70px);
+  background: #2563eb;
+  animation: pulse 2s infinite;
+  animation-delay: 1s;
+}
+
+/* Bounce animation for WhatsApp */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Pulse animation for Calendly */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+/* Tooltip styling */
+.float-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 70px; 
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.float-btn:hover::after {
+  opacity: 1;
+}
+</style>
+
+<!-- Enrollment Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const enrollForm = document.getElementById('enrollForm');
+  const courseInput = document.getElementById('courseName');
+
+  // Populate course name when clicking enroll
+  document.querySelectorAll('.enroll-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const course = btn.getAttribute('data-course');
+      courseInput.value = course;
+    });
+  });
+
+  // Form submission
+  enrollForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById('studentName').value.trim(),
+      email: document.getElementById('studentEmail').value.trim(),
+      course: courseInput.value.trim()
+    };
+
+    if (!data.name || !data.email || !data.course) {
+      alert("⚠️ Please fill all fields before submitting.");
+      return;
+    }
+
+    try {
+      // Send JSON POST to Apps Script
+      const res = await fetch("https://script.google.com/macros/s/AKfycbyizEW-5FtAq1CfOwpPdrl5EtStBBtNFDSj-4kF2MbZsfK0wLj7gFiraMImcsHQ6-n4Zw/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+
+      if (result.status === "success") {
+        alert("✅ Enrollment received! A confirmation email has been sent.");
+        enrollForm.reset();
+
+        // Close modal if open
+        const modalEl = document.getElementById('enrollModal');
+        const modal = bootstrap.Modal.getInstance(modalEl);
+        if (modal) modal.hide();
+      } else {
+        alert("⚠️ Error: " + (result.message || "Something went wrong. Please try again."));
+      }
+
+    } catch (error) {
+      console.error("Enrollment Error:", error);
+      alert("❌ Network error. Please check your connection and try again.");
+    }
+  });
+});
+</script>
+
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0">
+</script>
+</body>
+</html>

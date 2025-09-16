@@ -2,7 +2,8 @@
   "rewrites": [
      { "source": "/", "destination": "/index.html" },
     { "source": "/about", "destination": "/about.html" },
-      { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/courses", "destination": "/courses.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/fullstack", "destination": "/fullstack.html" },
     { "source": "/database", "destination": "/database.html" },
