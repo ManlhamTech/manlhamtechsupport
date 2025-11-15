@@ -192,7 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="h-100 d-lg-inline-flex align-items-center d-none">
       <a class="btn btn-square rounded-circle bg-light text-primary me-2"
-        href="https://www.facebook.com/manlhamtechsupport"><i class="fab fa-facebook-f"></i></a>
+        href="https://www.facebook.com/mtsupport1/"><i class="fab fa-facebook-f"></i></a>
       <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://x.com/manlhamtech"><i class="fab fa-twitter"></i></a>
       <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://www.linkedin.com/company/manlham-tech-support/" target="_blank"><i
           class="fab fa-linkedin-in"></i></a>
@@ -324,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a class="btn btn-square rounded-circle me-1" href="https://x.com/manlhamtech">
             <i class="fab fa-twitter"></i>
           </a>
-          <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/manlhamtechsupport/">
+          <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/mtsupport1/">
             <i class="fab fa-facebook-f"></i>
           </a>
           <a class="btn btn-square rounded-circle me-1" href="https://www.linkedin.com/company/manlham-tech-support/">
@@ -427,17 +427,31 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/211929267673" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+<a 
+  href="https://wa.me/211929267673" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  class="float-btn whatsapp-float" 
+  data-tooltip="Chat with us on WhatsApp"
+>
   <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- Google Meet Floating Button -->
+<a 
+  href="https://meet.google.com/ziv-fcrp-nwe" 
+  target="_blank" 
+  class="float-btn googlemeet-float" 
+  data-tooltip="Join Google Meet"
+>
+  <i class="fa fa-video"></i>
+</a>
+
 <style>
-.whatsapp-float {
+/* Common button style */
+.float-btn {
   position: fixed;
-  bottom: 50%;
   right: 20px;
-  transform: translateY(-50%);
-  background: #25d366;
-  color: white;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -445,14 +459,60 @@ document.addEventListener('DOMContentLoaded', function () {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 24px;
+  color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  transition: all 0.3s ease;
 }
-.whatsapp-float:hover {
-  transform: translateY(-50%) scale(1.15);
-  box-shadow: 0 0 15px #25d366;
+
+/* WhatsApp Button */
+.whatsapp-float {
+  bottom: 50%;
+  background: #25d366;
+  animation: bounce 2s infinite;
+}
+
+/* Google Meet Button */
+.googlemeet-float {
+  bottom: calc(50% - 70px); /* Positioned below WhatsApp */
+  background: #0F9D58; /* Google Meet green */
+  animation: pulse 2s infinite;
+  animation-delay: 1s; /* starts after WhatsApp animation */
+}
+
+/* Bounce animation for WhatsApp */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Pulse animation for Google Meet */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(15, 157, 88, 0.5); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(15, 157, 88, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(15, 157, 88, 0); }
+}
+
+/* Tooltip styling */
+.float-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 70px; 
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.float-btn:hover::after {
+  opacity: 1;
 }
 </style>
 

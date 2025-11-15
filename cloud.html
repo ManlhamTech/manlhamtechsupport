@@ -192,7 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="h-100 d-lg-inline-flex align-items-center d-none">
       <a class="btn btn-square rounded-circle bg-light text-primary me-2"
-        href="https://www.facebook.com/manlhamtechsupport"><i class="fab fa-facebook-f"></i></a>
+        href="https://www.facebook.com/mtsupport1/"><i class="fab fa-facebook-f"></i></a>
       <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://x.com/manlhamtech"><i class="fab fa-twitter"></i></a>
       <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://www.linkedin.com/company/manlham-tech-support/" target="_blank"><i
           class="fab fa-linkedin-in"></i></a>
@@ -356,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a class="btn btn-square rounded-circle me-1" href="https://x.com/manlhamtech">
             <i class="fab fa-twitter"></i>
           </a>
-          <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/manlhamtechsupport/">
+          <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/mtsupport1/">
             <i class="fab fa-facebook-f"></i>
           </a>
           <a class="btn btn-square rounded-circle me-1" href="https://www.linkedin.com/company/manlham-tech-support/">
@@ -461,15 +461,24 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/211929267673" target="_blank" rel="noopener noreferrer" 
-   class="float-btn whatsapp-float" data-tooltip="Chat with us on WhatsApp">
+<a 
+  href="https://wa.me/211929267673" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  class="float-btn whatsapp-float" 
+  data-tooltip="Chat with us on WhatsApp"
+>
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Calendly Popup Floating Button -->
-<a href="https://calendly.com/manlhamtechsupport/consultation-call" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/manlhamtechsupport/consultation-call'}); return false;" 
-   class="float-btn calendly-float" data-tooltip="Book an Appointment">
-  <i class="fa fa-calendar"></i>
+<!-- Google Meet Floating Button -->
+<a 
+  href="https://meet.google.com/ziv-fcrp-nwe" 
+  target="_blank" 
+  class="float-btn googlemeet-float" 
+  data-tooltip="Join Google Meet"
+>
+  <i class="fa fa-video"></i>
 </a>
 
 <style>
@@ -490,18 +499,19 @@ document.addEventListener('DOMContentLoaded', function () {
   z-index: 1000;
 }
 
-/* Positioning + Animation */
+/* WhatsApp Button */
 .whatsapp-float {
   bottom: 50%;
   background: #25d366;
   animation: bounce 2s infinite;
-  animation-delay: 0s; /* start immediately */
 }
-.calendly-float {
-  bottom: calc(50% - 70px);
-  background: #2563eb;
+
+/* Google Meet Button */
+.googlemeet-float {
+  bottom: calc(50% - 70px); /* Positioned below WhatsApp */
+  background: #0F9D58; /* Google Meet green */
   animation: pulse 2s infinite;
-  animation-delay: 1s; /* starts 1 second later */
+  animation-delay: 1s; /* starts after WhatsApp animation */
 }
 
 /* Bounce animation for WhatsApp */
@@ -511,11 +521,11 @@ document.addEventListener('DOMContentLoaded', function () {
   60% { transform: translateY(-5px); }
 }
 
-/* Pulse animation for Calendly */
+/* Pulse animation for Google Meet */
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
-  70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(15, 157, 88, 0.5); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(15, 157, 88, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(15, 157, 88, 0); }
 }
 
 /* Tooltip styling */
@@ -534,6 +544,7 @@ document.addEventListener('DOMContentLoaded', function () {
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
+
 .float-btn:hover::after {
   opacity: 1;
 }
